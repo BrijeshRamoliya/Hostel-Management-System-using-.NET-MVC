@@ -1,0 +1,386 @@
+﻿
+@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/LayoutUser.cshtml";
+
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>HMS - index</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <!-- Load Require CSS -->
+    <link href="~/Content/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font CSS -->
+    <link href="~/Content/assets/css/boxicon.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Load Tempalte CSS -->
+    <link href="~/Content/assets/css/templatemo.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link href="~/Content/assets/css/custom.css" rel="stylesheet" />
+    <!--
+
+    TemplateMo 561 Purple Buzz
+
+    https://templatemo.com/tm-561-purple-buzz
+
+    -->
+    <!--Image Scrool-->
+
+
+
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            /*justify-self: center;*/
+            align-items: center;
+            background: #ffffff;
+        }
+
+        .section {
+            margin: 0;
+            padding: 0;
+            height: 70vh;
+            margin-top: 70px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .slider {
+            width: 800px;
+            height: 500px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .slide {
+            width: 600%;
+            height: 500px;
+            display: flex;
+        }
+
+            .slide input {
+                display: none;
+            }
+
+        .st {
+            width: 20%;
+            transition: 2s;
+        }
+
+            .st img {
+                width: 800px;
+                height: 500px;
+            }
+
+        .nav-m {
+            position: absolute;
+            width: 800px;
+            margin-top: -40px;
+            justify-content: center;
+            display: flex;
+        }
+
+        .nav a.navbar-brand {
+            color: #fff;
+            font-size: 30px !important;
+            font-weight: 500;
+        }
+
+        .button a {
+            color: #6665ee;
+            font-weight: 500;
+        }
+
+        .m-btn {
+            border: 2px solid #6d44b8;
+            padding: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 3s;
+        }
+
+            .m-btn:not(:last-child) {
+                margin-right: 30px;
+            }
+
+        .m-btn-hover {
+            background-color: #23e3c2;
+        }
+
+        #radio1:checked ~ .first {
+            margin-left: 0;
+        }
+
+        #radio2:checked ~ .first {
+            margin-left: -20%;
+        }
+
+        #radio3:checked ~ .first {
+            margin-left: -40%;
+        }
+
+        #radio4:checked ~ .first {
+            margin-left: -60%;
+        }
+
+        #radio5:checked ~ .first {
+            margin-left: -80%;
+        }
+
+        .nav-auto {
+            position: absolute;
+            width: 800px;
+            margin-top: 460px;
+            display: flex;
+            justify-content: center;
+        }
+
+            .nav-auto div {
+                border: 2px solid #23e3c2;
+                padding: 5px;
+                border-radius: 10px;
+                transition: 3s;
+            }
+
+                .nav-auto div:not(:last-child) {
+                    margin-right: 30px;
+                    justify-content: center;
+                }
+
+        #radio1:checked ~ .nav-auto .a-b1 {
+            background-color: #080808;
+        }
+
+        #radio2:checked ~ .nav-auto .a-b2 {
+            background-color: #0c0c0c;
+        }
+
+        #radio3:checked ~ .nav-auto .a-b3 {
+            background-color: #070707;
+        }
+
+        #radio4:checked ~ .nav-auto .a-b4 {
+            background-color: #070707;
+        }
+
+        #radio5:checked ~ .nav-auto .a-b5 {
+            background-color: #030303;
+        }
+    </style>
+
+
+    <!--Image Scrool End-->
+</head>
+
+<body>
+    <!-- Header --> 
+     
+    <!-- Close Header -->
+    <!--Hostel Photo-->
+    <!--Image Scrool-->
+    <section class="section">
+        <div class="slider">
+            <div class="slide">
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+                <input type="radio" name="radio-btn" id="radio5">
+
+                <div class="st first">
+                    <img src="~/Content/assets/img/7.jpg" />
+                </div>
+                <div class="st ">
+                    <img src="~/Content/assets/img/1.jpg" />
+                </div>
+                <div class="st ">
+                    <img src="~/Content/assets/img/5.jpg" />
+                </div>
+                <div class="st ">
+                    <img src="~/Content/assets/img/9.jpeg" />
+                </div>
+                <div class="st ">
+                    <img src="~/Content/assets/img/3.jpg" />
+                </div>
+
+                <div class="nav-auto">
+                    <div class="a-b1"></div>
+                    <div class="a-b2"></div>
+                    <div class="a-b3"></div>
+                    <div class="a-b4"></div>
+                    <div class="a-b5"></div>
+
+                </div>
+
+            </div>
+            <div class="nav-m">
+                <label for="radio1" class="m-btn"></label>
+                <label for="radio2" class="m-btn"></label>
+                <label for="radio3" class="m-btn"></label>
+                <label for="radio4" class="m-btn"></label>
+                <label for="radio5" class="m-btn"></label>
+            </div>
+
+
+        </div>
+
+    </section>
+    <!--Image Scrool End-->
+    <!-- Start Recent Work -->
+    <section class="py-5 mb-5">
+        <div class="container">
+            <div class="recent-work-header row text-center pb-5">
+                <h2 class="col-md-6 m-auto h2 semi-bold-600 py-5">Hostel Photo & Room Photo</h2>
+            </div>
+            <div class="row gy-5 g-lg-5 mb-4">
+
+                <!-- Start Recent Work -->
+                <div class="col-md-4 mb-3">
+                    <a href="#" class="recent-work card border-0 shadow-lg overflow-hidden">
+                        <img class="recent-work-img card-img" src="~/Content/assets/img/1.jpg" alt="Card image">
+                        <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
+                        </div>
+                    </a>
+                </div><!-- End Recent Work -->
+                <!-- Start Recent Work -->
+                <div class="col-md-4 mb-3">
+                    <a href="#" class="recent-work card border-0 shadow-lg overflow-hidden">
+                        <img class="recent-work-img card-img" src="~/Content/assets/img/2.jpg" alt="Card image">
+                        <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
+                        </div>
+                    </a>
+                </div><!-- End Recent Work -->
+                <!-- Start Recent Work -->
+                <div class="col-md-4 mb-3">
+                    <a href="#" class="recent-work card border-0 shadow-lg overflow-hidden">
+                        <img class="recent-work-img card-img" src="~/Content/assets/img/3.jpg" alt="Card image">
+                        <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
+                        </div>
+                    </a>
+                </div><!-- End Recent Work -->
+                <!-- Start Recent Work -->
+                <div class="col-md-4 mb-3">
+                    <a href="#" class="recent-work card border-0 shadow-lg overflow-hidden">
+                        <img class="recent-work-img card-img" src="~/Content/assets/img/14.jpg" alt="Card image">
+                        <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
+                        </div>
+                    </a>
+                </div><!-- End Recent Work -->
+                <!-- Start Recent Work -->
+                <div class="col-md-4 mb-3">
+                    <a href="#" class="recent-work card border-0 shadow-lg overflow-hidden">
+                        <img class="recent-work-img card-img" src="~/Content/assets/img/7.jpg" alt="Card image">
+                        <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
+                        </div>
+                    </a>
+                </div><!-- End Recent Work -->
+                <!-- Start Recent Work -->
+                <div class="col-md-4 mb-3">
+                    <a href="#" class="recent-work card border-0 shadow-lg overflow-hidden">
+                        <img class="recent-work-img card-img" src="~/Content/assets/img/8.png" alt="Card image">
+                        <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
+                        </div>
+                    </a>
+                </div><!-- End Recent Work -->
+
+            </div>
+        </div>
+    </section>
+    <!-- End Recent Work -->
+
+    <section class="py-5 mb-5">
+        <div class="container">
+            <div class="recent-work-header row text-center pb-5">
+                <h2 class="col-md-6 m-auto h2 semi-bold-600 py-5">Mesh Photo</h2>
+            </div>
+            <div class="row gy-5 g-lg-5 mb-4">
+
+                <!-- Start Recent Work -->
+                <div class="col-md-4 mb-3">
+                    <a href="#" class="recent-work card border-0 shadow-lg overflow-hidden">
+                        <img class="recent-work-img card-img" src="~/Content/assets/img/9.jpeg" alt="Card image">
+                        <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
+                        </div>
+                    </a>
+                </div><!-- End Recent Work -->
+                <!-- Start Recent Work -->
+                <div class="col-md-4 mb-3">
+                    <a href="#" class="recent-work card border-0 shadow-lg overflow-hidden">
+                        <img class="recent-work-img card-img" src="~/Content/assets/img/10.jpg" alt="Card image">
+                        <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
+                        </div>
+                    </a>
+                </div><!-- End Recent Work -->
+                <!-- Start Recent Work -->
+                <div class="col-md-4 mb-3">
+                    <a href="#" class="recent-work card border-0 shadow-lg overflow-hidden">
+                        <img class="recent-work-img card-img" src="~/Content/assets/img/12.jpg" alt="Card image">
+                        
+                        <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
+                        </div>
+                    </a>
+                </div><!-- End Recent Work -->
+
+            </div>
+        </div>
+    </section>
+    <!-- End Recent Work -->
+    <!-- Start Footer -->
+ 
+    <!-- End Footer -->
+    <!-- Bootstrap -->
+    <script src="~/Content/assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Load jQuery require for isotope -->
+    <script src="~/Content/assets/js/jquery.min.js"></script>
+    <!-- Isotope -->
+    <script src="~/Content/assets/js/isotope.pkgd.js"></script>
+    <!-- Page Script -->
+    <script>
+        $(window).load(function () {
+            // init Isotope
+            var $projects = $('.projects').isotope({
+                itemSelector: '.project',
+                layoutMode: 'fitRows'
+            });
+            $(".filter-btn").click(function () {
+                var data_filter = $(this).attr("data-filter");
+                $projects.isotope({
+                    filter: data_filter
+                });
+                $(".filter-btn").removeClass("active");
+                $(".filter-btn").removeClass("shadow");
+                $(this).addClass("active");
+                $(this).addClass("shadow");
+                return false;
+            });
+        });
+    </script>
+    <!-- Templatemo -->
+    <script src="~/Content/assets/js/templatemo.js"></script>
+    <!-- Custom -->
+    <script src="~/Content/assets/js/custom.js"></script>
+
+    <!--Image Scrool -->
+    <script>
+        var counter = 1;
+        setInterval(function () {
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if (counter > 5) {
+                counter = 1;
+            }
+        }, 4000);
+    </script>
+    <!--Image Scrool End-->
+
+</body>
+
+</html>

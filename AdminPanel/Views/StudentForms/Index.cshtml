@@ -1,0 +1,192 @@
+﻿@model IEnumerable<AdminPanel.StudentForm>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="midde_cont">
+    <div class="container-fluid">
+        <div class="row column_title">
+            <div class="col-md-12">
+                <div class="page_title">
+                    <h2>Detail's</h2>
+                    <button type="button" class="btn btn-success"> @*<a href="@Url.Action("Create","StudentForms")">Add Student</a>*@</button>
+                </div>
+                @*<p>
+                    @Html.ActionLink("Create New", "Create")
+                </p>*@
+            </div>
+
+
+            <!-- row -->
+            <div class="row">
+                <!-- table section -->
+                <div class="col-md-12">
+                    <div class="white_shd full margin_bottom_30">
+                        <div class="full graph_head">
+                            <div class="heading1 margin_0">
+                                <h2>Student Data</h2>
+                            </div>
+                            <div class="form-outline mb-4">
+                                <input type="search" class="form-control" id="myInput">
+                                <label class="form-label" for="datatable-search-input">Search</label>
+                            </div>
+                            <div id="datatable">
+                            </div>
+                        </div>
+                        <div class="table_section padding_infor_info">
+                            <div class="table-responsive-sm">
+                                <table class="table" id="myTable">
+                                    <thead>
+                                        <tr>
+                                            <th>Id</th>
+                                            <th>Firstname</th>
+                                            <th>Lastname</th>
+                                            <th>Age</th>
+                                            <th>City</th>
+                                            <th>Gender</th>
+                                            <th>Email-Id</th>
+                                            <th>Contect-No</th>
+                                            <th>Standard</th>
+                                            <th>Join-Date</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        @foreach (var item in Model)
+                                        {
+                                        <tr>
+                                            <td>2</td>
+                                            <td>@Html.DisplayFor(modelItem => item.Firstname)</td>
+                                            <td>  @Html.DisplayFor(modelItem => item.Lastname)</td>
+                                            <td> @Html.DisplayFor(modelItem => item.Age)</td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.City)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Gender)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Email)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Contectno)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Standard)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Joindate)
+                                            </td>
+                                            <td>
+                                                @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                                                @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                                                @Html.ActionLink("Delete", "Delete", new { id = item.id })
+                                            </td>
+
+
+
+                                        </tr>
+                                        }
+                                        </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <div class="container-fluid">
+            <div class="footer">
+                <p>Copyright © Nimish and Brijesh. All rights reserved.<br><br>
+            </div>
+        </div>
+    </div>
+    <!-- end dashboard inner -->
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#myInput").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>
+
+
+@*<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Firstname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lastname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Age)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contectno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Standard)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Joindate)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Firstname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lastname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contectno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Standard)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Joindate)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.id })
+            </td>
+        </tr>
+    }
+
+</table>*@
